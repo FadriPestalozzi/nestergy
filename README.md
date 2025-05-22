@@ -1,40 +1,100 @@
 # Nestergy
 
-Want to supply your home with renewable electricity and heat?
+Want to supply your home with renewable electricity and heat 24/7/365?
 
 Nestergy helps you take an informed decision based on:
 
 - your location,
 - your budget, and
-- the expanding sea of technological possibilities available right now.
+- the expanding sea of technological possibilities available right now
 
-## Minimum Viable Product (MVP)
+🦾🫀🐍
 
-The initial goal of Nestergy is to build a Minimum Viable Product (MVP) that
-provides core functionality to help users evaluate renewable energy options at
-their location. The MVP will include:
+# Overview
 
-### Location-Based Recommendations:
+Nestergy is a web-based platform designed to guide homeowners in selecting
+renewable energy solutions.
 
-Input your location to get tailored suggestions for renewable energy solutions
-(e.g., solar, wind, geothermal) suitable for your area.
+Based on your location (latitude and longitude), Nestergy retrieves climate data
+— such as temperature range and sunshine hours to provide tailored
+recommendations for solar panel installations and storage requirements.
+
+The platform aims to simplify the decision-making process, considering factors
+like energy needs, budget constraints, and local climate conditions.
+
+# Key Features (MVP)
+
+Since this is an ambitious project touching on various technical challenges and
+ongoing research, the project is starting off with an MVP, focusing on solar
+power in the USA using only commercially available litium-ion batteries. The MVP
+will include:
+
+## Location-Based Climate Data:
+
+Based on user location input (latitude, longitude), fetch corresponding climate
+data (daily min-max across entire year) based on reference period (e.g. 3
+years):
+
+- temperature (C)
+- solar radiation (W/m²)
+- sunshine (h/d)
+
+## Solar Recommendations:
+
+Suggests solar panel solutions based on climate data and user preferences.
+
+## Energy Storage:
+
+Suggest eletric storage capacity (kWh) per person to cover lowest production
+period for user input location and get associated cost.
+
+## Agent
+
+To keep Nestergy up to date with developments in renewable energy and storage
+solutions, an agent will be developed.
+
+This agend will continuously update the platform’s technology database with the
+latest state-of-the-art advancements in renewable electricity, heat generation,
+and energy storage. This agent will:
+
+### Scrape Data:
+
+Automatically gather data from trusted sources (e.g., industry reports,
+renewable energy journals, manufacturer websites) on new solar panels, heat
+pumps, and energy storage systems (e.g., lithium-ion, solid-state batteries).
+
+### Update Recommendations:
+
+Integrate the latest technologies into Nestergy’s recommendation engine,
+ensuring users receive suggestions based on cutting-edge options.
+
+### Example Impact:
+
+If a new high-efficiency solar panel (e.g., 25% efficiency vs. 20% for current
+models) enters the market in 2026, the agent will update Nestergy’s database,
+allowing users to benefit from improved recommendations.
+
+### Implementation Plan:
+
+- Use web scraping to collect data.
+- Store technology data in a structured database.
+- Develop an update pipeline to refresh recommendations weekly or monthly.
+
+# Key Features (extension plans)
+
+Nestergy can be expanded with the following features to enhance its
+capabilities:
+
+### Location-Based Climate Data (extended):
+
+- access to running water for hydropower
+- wind speed for wind energy
+- geothermal suitability for combined heat and power
+- access to biomass for combined heat and power
 
 ### Budget Calculator:
 
 Enter your budget to see which technologies fit your financial constraints.
-
-### Technology Overview:
-
-A simple list of available renewable energy technologies with basic pros and
-cons.
-
-The MVP will focus on a user-friendly interface and essential features to
-validate the concept and gather user feedback.
-
-## Ideas to Extend and Grow Functionality Once MVP is established
-
-Nestergy can be expanded with the following features to enhance its
-capabilities:
 
 ### Advanced Cost Estimation:
 
@@ -72,12 +132,54 @@ success stories about their renewable energy setups.
 Create a mobile app version of Nestergy for on-the-go access to recommendations
 and tools.
 
-### AI-Powered Insights:
+## Time Series (extension)
 
-Implement machine learning to provide personalized recommendations based on user
-behavior, local regulations, and emerging technologies.
+To enhance Nestergy’s utility for long-term building projects, we will implement
+a time series model to predict the cost of known renewable energy technologies
+as a baseline scenario, tailored to projects with a specific future completion
+date. Additionally, this model will estimate the expected lifetime of the chosen
+technology mix. This feature will:
+
+### Cost Prediction:
+
+Use historical cost data for renewables (e.g., solar panels, batteries) to train
+a time series model (ARIMA or LSTM).
+
+Predict future costs based on trends, inflation, and market adoption (e.g.,
+solar panel costs have historically dropped ~10% annually due to technological
+advances).
+
+#### Example:
+
+For a project completing in 2030, predict the cost of a 5 kW solar system,
+considering expected price declines.
+
+### Technology Lifetime:
+
+Estimate the lifespan of the recommended technology mix based on manufacturer
+data, environmental conditions (e.g., temperature, humidity from NASA POWER),
+and usage patterns.
+
+#### Example:
+
+A solar panel in a high-radiation, low-humidity area (e.g., Texas) might last 30
+years, while the same panel in a cold, snowy climate (e.g., Alaska) might last
+25 years due to thermal stress.
+
+### Implementation Plan:
+
+- Collect historical cost data from public sources and clean it for modeling.
+- Use Python libraries like statsmodels for time series forecasting.
+- Integrate environmental data (NASA POWER’s T2M_RANGE) to adjust lifetime
+  estimates.
+- Display predictions in the web interface: “Expected cost in 2030: $5,000 for a
+  5 kW system; Estimated lifetime: 28 years.”
 
 # 📊 Data Sources — MVP: U.S. Solar + Battery
+
+Nestergy uses climate data from the NASA POWER Project, providing reliable,
+model-derived meteorological and solar radiation data for renewable energy
+applications.
 
 ## Minimum Viable Product: U.S. Solar PV + Li-ion Batteries
 
@@ -105,7 +207,7 @@ behavior, local regulations, and emerging technologies.
 
 ---
 
-## 🚀 Further Extensions: Global Reach & Tech Diversity
+## 🚀 Extensions: Global Reach & Tech Diversity
 
 ### 🌍 Expand Geographically
 
@@ -131,7 +233,13 @@ developed.)
 
 # License
 
-See the LICENSE file for details.
+Licensed under the MIT License to encourage collaboration and adoption. Feel
+free to use, modify, and distribute! and add yourself to the authors list along
+with your contributions 🦾🫀🐍
+
+## Authors:
+
+- FadriPestalozzi (GitHub)
 
 # 🐣 Easter Egg: Hatching "Nestergy"
 
