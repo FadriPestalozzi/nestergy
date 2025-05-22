@@ -10,6 +10,11 @@ Nestergy helps you take an informed decision based on:
 
 🦾🫀🐍
 
+# Table of Contents
+
+<!-- START doctoc -->
+<!-- END doctoc -->
+
 # Overview
 
 Nestergy is a web-based platform designed to guide homeowners in selecting
