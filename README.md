@@ -17,15 +17,15 @@ Nestergy helps you take an informed decision based on:
 
 # Overview
 
-Nestergy is a web-based platform designed to guide homeowners in selecting
-renewable energy solutions.
+Nestergy is a web-based platform designed to guide you in selecting renewable
+energy and storage solutions.
 
 Based on your location (latitude and longitude), Nestergy retrieves climate data
-— such as temperature range and sunshine hours to provide tailored
-recommendations for solar panel installations and storage requirements.
+like temperature range and sunshine hours to provide tailored recommendations on
+how to supply your home with renewable energy and storage.
 
-The platform aims to simplify the decision-making process, considering factors
-like energy needs, budget constraints, and local climate conditions.
+This platform aims to streamline your decision-making process, considering
+factors like energy needs, budget constraints, and local climate conditions.
 
 # Key Features (MVP)
 
