@@ -77,6 +77,63 @@ years):
 - solar radiation (W/m²)
 - sunshine (h/d)
 
+# TODO
+
+user story
+
+- I want to supply this location for x people in timeframe starting in y years
+  until z years lifetime
+
+model idea
+
+- what is best design of house to give me
+- large area to produce
+- energy efficiency, passive heating and cooling
+- most profit to sell electricity to grid
+- architecture using ML --> real contribution, create design . least consumption
+  and max production
+- diffusion model to create images
+
+automation
+
+an agent asking user in chat
+
+LLM model searching DB
+
+updating DB
+
+agent on steroids
+
+- optimized and fine-tuned by a scientist (myself)
+
+- use mcp server to search the web (simple, no model coding)
+  - don't need processing power
+  - create own agent using own time series
+  - use case: time series forecast of non-deterministic input
+    - scenarios for money, foreign exchange rates, inflation
+- RAGs (medium effort, =coding part)
+  - keep updating db
+  - store in mongo db, vector db, embed new papers / commercial available
+  - place most cost-efficient solution for each energy source into db
+  - get closest vectors from database (dot-product)
+  - give most similar vectors to LLM
+  - LLM mixing to create human-readable output
+    - manual implementation of search-the-web
+- fine-tune model (expensive and complex, retraining every month cost effective)
+  - need virtual machines
+    - need vertex AI
+    - compute engine
+
+## property data
+
+- Roof Angle (in degrees) as a user input allows Nestergy to account for the
+  tilt of the roof, which affects solar panel efficiency. The angle influences
+  how directly sunlight hits the panels, impacting energy yield (e.g., optimal
+  angles vary by latitude for maximum solar exposure). Roof Area: Including roof
+  area (in square meters or square feet) enables the platform to estimate the
+  maximum number of solar panels that can be installed, which is critical for
+  calculating potential energy generation and system costs.
+
 ## Solar Recommendations:
 
 Suggests solar panel solutions based on climate data and user preferences.
