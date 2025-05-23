@@ -79,7 +79,14 @@ years):
 
 # TODO
 
-user story
+## to get images?
+
+- dataset for parametric architecture
+- how to use diffusion model
+- model to tweak based on location
+- use local materials
+
+## user story
 
 - I want to supply this location for x people in timeframe starting in y years
   until z years lifetime
