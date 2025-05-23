@@ -12,10 +12,41 @@ Nestergy helps you take an informed decision based on:
 
 # Table of Contents
 
-testing automatic generation below
-
 <!-- START doctoc -->
 <!-- END doctoc -->
+
+- [Overview](#overview)
+- [Key Features (MVP)](#key-features-mvp)
+  - [Location-Based Climate Data](#location-based-climate-data)
+  - [Solar Recommendations](#solar-recommendations)
+  - [Energy Storage](#energy-storage)
+  - [Agent](#agent)
+    - [Scrape Data](#scrape-data)
+    - [Update Recommendations](#update-recommendations)
+    - [Example Impact](#example-impact)
+    - [Implementation Plan](#implementation-plan)
+- [Key Features (extension plans)](#key-features-extension-plans)
+  - [Location-Based Climate Data (extended)](#location-based-climate-data-extended)
+  - [Budget Calculator](#budget-calculator)
+  - [Advanced Cost Estimation](#advanced-cost-estimation)
+  - [Energy Savings Simulator](#energy-savings-simulator)
+  - [Weather and Climate Integration](#weather-and-climate-integration)
+  - [Vendor Comparison](#vendor-comparison)
+  - [Carbon Footprint Tracker](#carbon-footprint-tracker)
+  - [Community Features](#community-features)
+  - [Mobile App Development](#mobile-app-development)
+  - [Time Series (extension)](#time-series-extension)
+    - [Cost Prediction](#cost-prediction)
+    - [Technology Lifetime](#technology-lifetime)
+    - [Implementation Plan](#implementation-plan-1)
+- [Data Sources — MVP: U.S. Solar + Battery](#data-sources--mvp-us-solar--battery)
+  - [Minimum Viable Product: U.S. Solar PV + Li-ion Batteries](#minimum-viable-product-us-solar-pv--li-ion-batteries)
+  - [Extensions: Global Reach & Tech Diversity](#extensions-global-reach--tech-diversity)
+    - [Expand Geographically](#expand-geographically)
+    - [Expand Technologies](#expand-technologies)
+- [Getting Started](#getting-started)
+- [License](#license)
+  - [Authors](#authors)
 
 # Overview
 
