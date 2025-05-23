@@ -12,6 +12,8 @@ Nestergy helps you take an informed decision based on:
 
 # Table of Contents
 
+testing automatic generation below
+
 <!-- START doctoc -->
 <!-- END doctoc -->
 
