@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "README.md"
+  workflow_dispatch:
 
 jobs:
   update-toc:
@@ -15,33 +14,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22" # Updated to a more recent version
-
-      - name: Debug - Check Node.js version
-        run: node --version
-
-      - name: Install doctoc
-        run: npm install -g doctoc
-
-      - name: Debug - Verify doctoc installation
-        run: doctoc --version
-
-      - name: Debug - Check README.md exists
-        run: ls -la README.md
+      - name: Debug - Check runner environment
+        run: |
+          echo "OS Info:"
+          cat /etc/os-release
+          echo "Shell Info:"
+          ls -l /bin/sh || echo "/bin/sh not found"
 
       - name: Generate TOC
-        run: doctoc README.md --title '**Table of Contents**'
+        uses: technote-space/toc-generator@v4
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_PATHS: README.md
+          TOC_TITLE: "**Table of Contents**"
+          COMMIT_MESSAGE: "Update Table of Contents [skip ci]"
 
       - name: Debug - Check README.md after TOC generation
         run: cat README.md
-
-      - name: Commit changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add README.md
-          git diff --staged --quiet || git commit -m "Update Table of Contents [skip ci]"
-          git push
